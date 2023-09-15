@@ -24,6 +24,6 @@ jobs:
           destination-github-username: mzbrau
           destination-repository-name: docs-multi
           user-email: mr.michael.browne@gmail.com
-          target-branch: "gh-pages"
+          target-branch: "main"
           target-directory: Integration1
           
