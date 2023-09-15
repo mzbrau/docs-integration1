@@ -1,0 +1,26 @@
+name: Copy Docs to Documentation Project
+
+on:
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    shell: bash
+    working-directory: .
+
+jobs:
+  copy-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push docs to another repo
+        uses: nkoppel/push-files-to-another-repository@1.1.0
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-files: 'docs/'
+          destination-username: 'mzbrau'
+          destination-repository: 'https://github.com/mzbrau/docs-multi'
+          destination-directory: 'Integration1'
+          commit-email: 'mr.michael.browne@gmail.com'
