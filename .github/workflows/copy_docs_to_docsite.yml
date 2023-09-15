@@ -25,4 +25,5 @@ jobs:
           destination-repository-name: docs-multi
           user-email: mr.michael.browne@gmail.com
           target-branch: "gh-pages"
+          target-directory: Integration1
           
